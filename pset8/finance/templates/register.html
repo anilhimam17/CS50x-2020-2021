@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register User
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+
+        <!-- Username textbox of the register page -->
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+
+        <!-- Password textbox of the register page -->
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+
+        <!-- Confirmation textbox for the password -->
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Confirmation" type="password">
+        </div>
+
+        <!-- Submit button to enter the user into the database -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

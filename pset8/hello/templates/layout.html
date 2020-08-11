@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Webpage</title>
+
+        <!-- Making a style block to change style when required -->
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+    </head>
+
+    <body>
+        <!-- This way we keep only the body unique while keeping all other html same -->
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BVS ELECTIONS: RegisterPage
+{% endblock %}
+
+{% block head %}
+    REGISTER
+{% endblock %}
+
+{% block body %}
+    <p>
+        <center>
+            <form action = "/register" method = "POST">
+                <div>
+                    <input type = "text" name = "username" placeholder = "Username" class = "form-group">
+                </div><br>
+
+                <div>
+                    <input type = "password" name = "password" placeholder = "Password" class = "form-group">
+                </div><br>
+
+                <div>
+                    <input type = "password" name = "confirmation" placeholder = "Password (AGAIN)" class = "form-group">
+                </div><br>
+
+                <div>
+                    <input type = "password" name = "securityKey" placeholder = "Security Key" class = "form-group">
+                </div><br>
+
+                <div>
+                    <button type = "submit" class = "form-group">REGISTER</button>
+                </div><br>
+            </form>
+        </center>
+    </p>
+{% endblock %}

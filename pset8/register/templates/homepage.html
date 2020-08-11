@@ -1,0 +1,18 @@
+{% block title %}
+    <title>HomePage</title>
+{% endblock %}
+
+{% block body %}
+    <center><h1> Registrants </h1></center>
+    <br><br>
+
+    <!-- Displaying all the registrants -->
+    <ol>
+    {% for i in profile: %}
+        <li>{{ i["name"] }} ({{ i["email"] }})</li>
+    {% endfor %}
+    </ol>
+    <br><br>
+    <a href = "/register"> Click here to register </a>
+{% endblock %}
+

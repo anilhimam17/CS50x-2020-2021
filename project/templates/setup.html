@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BVS ELECTIONS: SetupPage
+{% endblock %}
+
+{% block head %}
+    Setup Elections
+{% endblock %}
+
+{% block body %}
+    <p>
+        <center>
+            <form action = "/setup" method = "POST">
+                <div>
+                    <!-- Select menu of all the position -->
+                    <select name = "pos" class = "form-control">
+
+                        <!-- Initially select option -->
+                        <option selected>Select Position</option>
+
+                        <!-- All the other position -->
+                        {% for i in pos %}
+                            <option> {{ i }}</option>
+                        {% endfor %}
+
+                    </select>
+                </div><br>
+
+                <div>
+                    <input type = "text" name = "nName" placeholder = "Nominee Name" class = "form-group">
+                </div><br>
+
+                <div>
+                    <button type = "submit" class = "form-group">ENROLL</button>
+                </div><br>
+            </form>
+
+            <br>
+            <a href = "/admin" class = "normText"> Back to Admin Controls </a>
+            <br><br>
+            <h2 class = "normText">Please enter the names of all the candidates as per the order of the dropdown menu</h2>
+        </center>
+    </p>
+{% endblock %}

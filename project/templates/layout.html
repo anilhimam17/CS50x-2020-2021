@@ -1,0 +1,29 @@
+<html lang = "en">
+    <head>
+        <!-- Title of the webpage -->
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+
+        <!-- For accessing the CSS -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    </head>
+
+    <body>
+        <p>
+            <!-- Main Heading of the webpage -->
+            <h1 class = "mainHead"> {% block head %}{% endblock %}</h1>
+            <hr width = 95% size = 3 noshade>
+            <br><br>
+        </p>
+
+        {% block body %}
+        {% endblock %}
+    </body>
+
+    <!-- Footer of the webpage -->
+    <footer class = "normText">
+        <center><p>This website was created by Anil Industries &copy;</p></center>
+    </footer>
+</html>

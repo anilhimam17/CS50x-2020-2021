@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BVS ELECTIONS: AdminPage
+{% endblock %}
+
+{% block head %}
+    ADMINISTRATOR CONTROLS
+{% endblock %}
+
+{% block body %}
+    <p>
+        <center>
+            <div>
+                <a href = "/setup" class = "normText">SETUP ELECTIONS</a>
+            </div><br>
+
+            <div>
+                <a href = "/update" class = "normText">UPDATE ELECTIONS</a>
+            </div><br>
+
+            <div>
+                <a href = "/status" class = "normText">VIEW ELECTION STATS</a>
+            </div><br>
+
+            <div>
+                <a href = "/result" class = "normText">RESULT OF CURRENT ELECTIONS</a>
+            </div><br>
+
+            <div>
+                <a href = "/reset" class = "normText">RESET ELECTIONS</a>
+            </div><br>
+
+            <br><br><br>
+            <a href = "/" class = "normText"> Back to Home </a>
+        </center>
+    </p>
+{% endblock %}

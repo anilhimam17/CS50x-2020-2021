@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <form action = "/add" method = "post">
+        <input type = "text" name = "task" placeholder = "Task Name" id = "taskname">
+        <input type = "submit" id = "submit" disabled>
+
+        <!-- Adding javascript to check for empty value before entering them into the list -->
+        <script>
+            document.querySelector("#taskname").onkeyup = function() {
+                if (document.querySelector("#taskname").value === "")
+                {
+                    document.querySelector("#submit").disabled = true
+                }
+
+                else
+                {
+                    document.querySelector("#submit").disabled = false
+                }
+            }
+        </script>
+    </form>
+{% endblock %}

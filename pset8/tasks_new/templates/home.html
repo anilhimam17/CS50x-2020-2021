@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1> Tasks </h1>
+    <ol>
+        {% for task in todos: %}
+            <li> {{ task }}</li>
+        {% endfor %}
+    </ol>
+
+    <a href="/add"> To add a new task </a>
+{% endblock %}

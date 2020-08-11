@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BVS ELECTIONS: ResultsPage
+{% endblock %}
+
+{% block head %}
+    Election Results
+{% endblock %}
+
+{% block body %}
+    <p>
+        <center>
+            {% for i in winners: %}
+                {% if i["len"] != 1 %}
+
+                    <!-- Tie heading -->
+                    <h2 class = "normText"> Theres a tie </h2>
+
+                    <!-- Iterating all the names -->
+                    {% for j in range(i["len"]): %}
+                        <h2 class = "normText">Candidate: {{ i["name"][j] }}</h2>
+                    {% endfor %}
+                    <h2 class = "normText">
+                        Position: {{ i["position"] }}<br>
+                        Votes Secured: {{ i["votes"] }} out of {{ cVoters }}<br>
+                        <hr width = 60% size = 2 noshade>
+                        <br><br>
+                    </h2>
+
+                {% else %}
+                    <h2 class = "normText">
+                        Position: {{ i["position"] }}<br><br>
+                        Candidate: {{ i["name"] }}<br><br>
+                        Votes Secured: {{ i["votes"] }} out of {{ cVoters }}<br>
+                        <hr width = 60% size = 2 noshade>
+                        <br><br>
+                    </h2>
+                {% endif %}
+            {% endfor %}
+            <a href = "/dataAnalysis" class = "normText">Click here for Election Analysis</a>
+            <br><br>
+            <a href = "/admin" class = "normText"> Back to Admin Controls </a>
+        </center><br><br>
+    </p>
+{% endblock %}

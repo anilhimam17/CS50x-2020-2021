@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BVS ELECTIONS: UpdatePage
+{% endblock %}
+
+{% block head %}
+    Update Elections
+{% endblock %}
+
+{% block body %}
+    <p>
+        <center>
+            <form action = "/update" method = "POST">
+                <div>
+                    <select name = "pos">
+                        <option selected> Choose Position </option>
+                        {% for i in pos: %}
+                            <option> {{ i }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+
+                <div>
+                    <input type="text" placeholder = "Nominee Name" name = "nName" class = "form-group">
+                </div><br>
+
+                <div>
+                    <button type = "submit" class = "form-group">REMOVE</button>
+                </div><br>
+            </form>
+
+            <br>
+            <a href = "/admin" class = "normText"> Back to Admin Controls </a>
+            <br><br>
+            <h2 class = "normText">
+                Use this page only if you have made enrolled a nominee into the database
+                with wrong credentials or by mistake
+            </h2>
+        </center>
+    </p>
+{% endblock %}

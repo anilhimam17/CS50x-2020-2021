@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title> Error! </title>
+{% endblock %}
+
+{% block body %}
+    <center>
+        <h1> Sorry we have faced an error! </h1>
+    </center>
+
+    <div>
+        {{ message }}
+    </div>
+    <br><br>
+
+    Click here to get back to the <a href = "/"> HomeRoute </a>
+{% endblock %}

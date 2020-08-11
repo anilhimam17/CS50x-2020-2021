@@ -1,0 +1,191 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BVS ELECTIONS: VotePage
+{% endblock %}
+
+{% block head %}
+    START VOTING
+{% endblock %}
+
+{% block body %}
+    <p>
+        <center>
+            <form action = "/vote" method = "POST">
+                <div>
+                    <label for = "hbNom" class = "normText">HEAD BOY</label><br><br>
+                    <select name = "hbNom">
+                        <option selected>Select Head Boy</option>
+                        {% for i in hb: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "hgNom" class = "normText">HEAD GIRL</label><br><br>
+                    <select name = "hgNom">
+                        <option selected>Select Head Girl</option>
+                        {% for i in hg: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "sNom" class = "normText">SPORTS CAPTAIN</label><br><br>
+                    <select name = "sNom">
+                        <option selected>Select Sports Captain</option>
+                        {% for i in sc: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "asplbNom" class = "normText">ASST. HEAD BOY</label><br><br>
+                    <select name = "asplbNom">
+                        <option selected>Select ASST. HEAD BOY</option>
+                        {% for i in asplb: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "asplgNom" class = "normText">ASST. HEAD GIRL</label><br><br>
+                    <select name = "asplgNom">
+                        <option selected>Select ASST. HEAD GIRL</option>
+                        {% for i in asplg: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "ssNom" class = "normText">SEASURFERS HOUSE CAPTAIN</label><br><br>
+                    <select name = "ssNom">
+                        <option selected>Select SEASURFERS HOUSE CAPTAIN</option>
+                        {% for i in ssc: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "scNom" class = "normText">STORMCHASERS HOUSE CAPTAIN</label><br><br>
+                    <select name = "scNom">
+                        <option selected>Select STORMCHASERS HOUSE CAPTAIN</option>
+                        {% for i in scc: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "tbNom" class = "normText">TRAILBLAZERS HOUSE CAPTAIN</label><br><br>
+                    <select name = "tbNom">
+                        <option selected>Select TRAILBLAZERS HOUSE CAPTAIN</option>
+                        {% for i in tbc: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "tfNom" class = "normText">TERRAFORMERS HOUSE CAPTAIN</label><br><br>
+                    <select name = "tfNom">
+                        <option selected>Select TERRAFORMERS HOUSE CAPTAIN</option>
+                        {% for i in tfc: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "csNom" class = "normText">CULTURAL SECRETARY</label><br><br>
+                    <select name = "csNom">
+                        <option selected>Select CULTURAL SECRETARY</option>
+                        {% for i in cs: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "chNom" class = "normText">CREATIVE HEAD</label><br><br>
+                    <select name = "chNom">
+                        <option selected>Select CREATIVE HEAD</option>
+                        {% for i in ch: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "thNom" class = "normText">TECHNOLOGY HEAD</label><br><br>
+                    <select name = "thNom">
+                        <option selected>Select TECHNOLOGY HEAD</option>
+                        {% for i in th: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "comhNom" class = "normText">COMMUNICATIONS HEAD</label><br><br>
+                    <select name = "comhNom">
+                        <option selected>Select COMMUNICATIONS HEAD</option>
+                        {% for i in comh: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <label for = "comafNom" class = "normText">COMMUNITY AFFAIRS HEAD</label><br><br>
+                    <select name = "comafNom">
+                        <option selected>Select COMMUNITY AFFAIRS HEAD</option>
+                        {% for i in comaf: %}
+                            <option> {{ i["name"] }} </option>
+                        {% endfor %}
+                    </select>
+                </div><br>
+                <hr width = 60% size = 2 noshade>
+                <br><br>
+
+                <div>
+                    <button type = "submit" class = "form-group">VOTE</button>
+                </div><br><br>
+            </form>
+
+            <a href = "/" class = "normText"> End Voting </a>
+        </center>
+    </p>
+{% endblock %}

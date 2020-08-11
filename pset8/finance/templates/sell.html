@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    SalesPage
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method = "post">
+        <div class="form-group">
+            <!-- Select tag containing all the shares purchased -->
+            <select class="form-control" name="symbol">
+
+                <!-- Initial value of the select list -->
+                <option disabled selected value="">Symbol</option>
+
+                <!-- Loop of all the stock symbols corresponding to the user -->
+                {% for i in stocks: %}
+                    <option value = "{{ i["symbol"] }}"> {{ i["symbol"] }} </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Textbox corresponding to the number of shares -->
+        <div class="form-group">
+            <input class="form-control" name="shares" placeholder="Shares" type="number">
+        </div>
+
+        <!-- Button to sell the stocks -->
+        <button class="btn btn-primary" type="submit">Sell</button>
+
+    </form>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BVS ELECTIONS: StatPage
+{% endblock %}
+
+{% block head %}
+    Election Stats
+{% endblock %}
+
+{% block body %}
+    <p>
+        <center>
+            <table border = 3 cellpadding = 15>
+                <tr align = left class = "normText">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Votes</th>
+                </tr>
+
+                <!-- All nominees list -->
+                {% for i in nominees: %}
+                    <tr class = "normText">
+                        <td> {{ i["id"] }} </td>
+                        <td> {{ i["name"] }} </td>
+                        <td> {{ i["position"] }} </td>
+                        <td> {{ i["votes"] }} </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <br><br>
+            <a href = "/admin" class = "normText">Back to Admin Controls</a>
+            <br><br><br>
+        </center>
+    </p>
+{% endblock %}

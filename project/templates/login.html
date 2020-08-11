@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BVS ELECTIONS: LoginPage
+{% endblock %}
+
+{% block head %}
+    ADMIN LOGIN
+{% endblock %}
+
+{% block body %}
+    <p>
+        <center>
+            <form action = "/login" method = "POST">
+                <div>
+                    <input type = "text" name = "username" placeholder = "Username" class = "form-group">
+                </div><br>
+
+                <div>
+                    <input type = "password" name = "password" placeholder = "Password" class = "form-group">
+                </div><br>
+
+                <div>
+                    <button type = "submit" class = "form-group">LOGIN</button>
+                </div><br>
+            </form>
+
+            <a href = "/register" class = "normText"> Click to Register</a>
+            <br><br>
+            <a href = "/" class = "normText"> Click to get back to Home</a>
+        </center>
+    </p>
+{% endblock %}

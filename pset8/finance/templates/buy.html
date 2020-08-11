@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    MerchantPage
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method = "post">
+
+        <!-- Textbox corresponding to the symbol -->
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text">
+        </div>
+
+        <!-- Textbox corresponding to the number of shares -->
+        <div class="form-group">
+            <input class="form-control" name="shares" placeholder="Shares" type="number">
+        </div>
+        
+        <!-- Button to buy the number of share via /buy -->
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+{% endblock %}
