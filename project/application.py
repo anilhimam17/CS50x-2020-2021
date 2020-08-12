@@ -224,35 +224,6 @@ def vote():
 
 # ----------------------------------------------------------------------------------------------------
 
-# Data Analysis Route
-@app.route("/dataAnalysis")
-def dataAnalysis():
-
-    # Stores the names of all the saved graphs
-    locs = []
-
-    # Acquring all the candidates for all the positions
-    for i in pos:
-        nProf = db.execute("select name, votes from nominees where position == ?", i)
-
-        # Appending the names and the votes respectively
-        names = []; votes = []
-        for j in nProf:
-            names.append(j["name"])
-            votes.append(j["votes"])
-		
-		# Plotting the pie chart
-        plt.title(f"The Statistics for the postion: {i}")
-        plt.pie(x = votes, labels = names, autopct = "%.02f%%")
-        plt.savefig(f"{i}.png")
-
-        # Appending the name of the graph to the list
-        locs.append(f"{i}.png")
-
-    return render_template("dataAnalysis.html", locs = locs)
-
-# ----------------------------------------------------------------------------------------------------
-
 # Running the webserver from terminal
 if __name__ == "__main__":
 	app.run()
