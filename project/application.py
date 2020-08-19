@@ -136,8 +136,16 @@ def update():
         if not res:
             return render_template("apology.html", message = "The entered credentials are invalid please check")
 
+        # Acquiring the ID to reset the ids for all the nominees
+        idVal = res[0]["id"]
+        totalCandidates = db.execute("select count(*) as count from nominees")[0]["count"]
+
         # Removing the nominee
         db.execute("delete from nominees where name == ? and position == ?", nName, pName)
+
+        # Updating the ID's of all the nominees
+        for i in range(idVal, totalCandidates + 1):
+            db.execute("update nominees set id = ? where id == ?", i, i + 1)
 
         return redirect("/update")
 
